@@ -51,7 +51,7 @@ scrapeTarget.forEach(module=>{
             title:'a | trim',
             url:'a@href | encode',
             pdf: xray('a@href | encode','.download > a@href'),
-            audioLink: xray('a@href | encode','.overlayIcon > a@href | encode')
+            audioLink: xray('a@href','.overlayIcon > a@href')
         }]
     )((err, items) => {
         if(err) throw err;
